@@ -1,0 +1,90 @@
+<html>
+<head>
+ 
+<body background-image: url(/static/images/properties.jpg)>
+ <h1> House Price Prediction</h1>
+
+ <form action="/predict" method="POST"> 
+  <table id="hprice" class="display" style="width:30%" border="1">
+    <thead>
+        <tr>
+            <th>Independent Variables (Features)</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Posted_by:</td>
+                <td><select size="1" id="posted_by" name="posted_by">
+                    <option value="Builder" selected="selected">
+                        Builder
+                    </option>
+                    <option value="Dealer">
+                        Dealer
+                    </option>
+                    <option value="Owner">
+                        Owner 
+                    </option>
+                    </select></td>
+            </tr>
+            <tr>
+              <td>RERA:</td>
+                      <td><select size="1" id="RERA" name="RERA">
+                          <option value= 1 selected="selected">
+                              Yes
+                          </option>
+                          <option value= 0>
+                              No
+                          </option>
+                          </select></td>
+            </tr>
+            <tr>
+              <td>BHK_NO:</td>
+                      <td><input type = "number" name = "BHK_NO" placeholder = "Enter BHK_NO"/> </td>
+            </tr>
+            <tr>
+              <td>Square_Ft:</td>
+                      <td><input type = "number" name = "Square_Ft" placeholder = "Enter Square_Ft"/> </td>
+            </tr>
+            <tr>
+              <td>Ready_to_Move :</td>
+                      <td><select size="1" id="Ready_to_Move" name="Ready_to_Move">
+                          <option value= 1 selected="selected">
+                              Yes
+                          </option>
+                          <option value= 0>
+                              No
+                          </option>
+                          </select></td>
+            </tr>                 
+            <tr>
+              <td>Longtitude:</td>
+                      <td><input type = "number" step="0.001" name = "Longtitude" placeholder = "Enter Longtitude"/> </td>
+            </tr>
+            <tr>
+              <td>Latitude:</td>
+                      <td><input type = "number" step="0.001" name = "Latitude" placeholder = "Enter Latitude"/> </td>
+            </tr>
+            <tr>
+              <td>BHK_RK:</td>
+                      <td><input type = "number" name = "BHK_RK" placeholder = "Enter BHK_RK"/> </td>
+            </tr>
+            
+     </tbody>
+     
+    </table>
+    
+    
+    <button type = "submit" name  = "predict" style="height: 50px; width: 100px" >Predict Price </button>
+</form>
+
+</body>
+
+
+</head>
+
+{{prediction_text}}
+
+
+
+</html>
